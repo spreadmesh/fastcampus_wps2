@@ -1,0 +1,20 @@
+# 수업 노트
+
+- range(len(my_list))로 접근하여 index를 사용하지 말고
+- my_list.index를 사용해라
+
+- list는 for문 사용 방법이 상황에 따라 모두 사용되더라.
+  - for i in my_list
+  - for i in range(len(my_list))
+  - for i in my_list
+    - index = my_list.index(i)
+  - for index, value in enumerate(my_list)
+
+- for문에서 쓰지 않는 변수는 \_로 이름 붙이는 것이 관례이다.
+
+- 단순히 함수를 쓰는 것은 중요하지 않고 arguement와 parameter의 관계
+packing과 unpacking의 개념을 아는 것이 중요하다.
+
+
+과제
+- 소수구하기 - lambda comprehension으로
