@@ -1,3 +1,4 @@
+import functools
 ## 1. lambda operator 를 이용한 소수 구하기 구현
 """
 해결 과정
@@ -25,7 +26,17 @@ MAX = 1000
 #	in range(2, MAX)
 #	if x not in noprimes
 #]
-noprimes = sum(list(map(lambda i: list(map(lambda j: j, range(i*2, MAX, i))), range(2, int(MAX ** 0.5) + 1))), [])
+noprimes = list(map(
+    lambda i: list(map(
+        lambda j: j, 
+        range(i*2, MAX, i))), 
+    range(2, int(MAX ** 0.5) + 1)))
+
+noprimes = functools.reduce(
+    lambda x, y: x+y, 
+    noprimes
+    )
+
 primes = list(filter(lambda x:x not in noprimes, range(2, MAX)))
 
 print(primes)
